@@ -1,115 +1,100 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<img src="logo.png" style="height:60px;">
+<title>Crystal Roofing</title>
 
 <style>
-body {margin:0;font-family:Arial;background:#f4f6f9;}
+body {
+    margin:0;
+    font-family:Arial, sans-serif;
+}
 
+/* HEADER */
 header {
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:15px 20px;
-background:#fff;
-box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 20px;
+    background:#ffffff;
 }
 
-header h1 {margin:0;color:#0d1b2a;}
+header img {
+    height:60px;
+}
 
+header div {
+    text-align:right;
+    font-weight:bold;
+}
+
+/* HERO */
 .hero {
-background:url('https://images.unsplash.com/photo-1597009534688-12d7aefc1b4b') center/cover;
-height:500px;
-color:white;
-display:flex;
-flex-direction:column;
-justify-content:center;
-padding:40px;
-background-color:rgba(0,0,0,0.6);
-background-blend-mode:overlay;
+    background:url('https://images.unsplash.com/photo-1590496793929-36417d3117de?q=80&w=1600') center/cover;
+    color:white;
+    padding:80px 20px;
 }
 
-.hero h2 {font-size:40px;margin:0;}
-.hero p {font-size:20px;margin:10px 0;}
+.hero h1 {
+    font-size:32px;
+}
 
 .btn {
-display:inline-block;
-padding:12px 20px;
-margin:10px 10px 0 0;
-background:#ff6b00;
-color:#fff;
-text-decoration:none;
-border-radius:5px;
-font-weight:bold;
+    background:#ff6a00;
+    color:white;
+    padding:12px 20px;
+    text-decoration:none;
+    display:inline-block;
+    margin:5px;
+    border-radius:5px;
 }
 
+/* SERVICES */
 .services {
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:15px;
-padding:40px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    padding:30px;
+    gap:15px;
 }
 
-.card {
-background:white;
-padding:20px;
-text-align:center;
-border-radius:8px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+.service-box {
+    background:#f4f4f4;
+    padding:20px;
+    border-radius:10px;
+    width:200px;
+    text-align:center;
 }
 
-.about {
-display:flex;
-flex-wrap:wrap;
-gap:20px;
-padding:40px;
+/* ABOUT + FORM */
+.section {
+    display:flex;
+    flex-wrap:wrap;
+    padding:30px;
+    gap:20px;
 }
 
-.about-box, .form-box {
-flex:1;
-background:white;
-padding:20px;
-border-radius:8px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
-}
-
-ul {list-style:none;padding:0;}
-ul li {margin:10px 0;}
-
-.cta {
-background:#0d1b2a;
-color:white;
-padding:40px;
-text-align:center;
+.box {
+    flex:1;
+    background:#f9f9f9;
+    padding:20px;
+    border-radius:10px;
 }
 
 input, textarea {
-width:100%;
-padding:10px;
-margin:10px 0;
-border:1px solid #ccc;
-border-radius:5px;
+    width:100%;
+    padding:10px;
+    margin:5px 0;
 }
 
-.footer {
-text-align:center;
-padding:20px;
-background:#000;
-color:#ccc;
-}
-
-.whatsapp {
-position:fixed;
-bottom:20px;
-right:20px;
-background:#25D366;
-color:white;
-padding:15px;
-border-radius:50%;
-font-size:20px;
-text-decoration:none;
+/* FOOTER */
+footer {
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
+    padding:30px;
 }
 </style>
 </head>
@@ -117,63 +102,57 @@ text-decoration:none;
 <body>
 
 <header>
-<h1>Crystal Roofing</h1>
-<div>
-<strong>Call:</strong> 07706 044348<br>
-<strong>Call:</strong> 07598 734167
-</div>
+    <img src="logo.png">
+    <div>
+        Call: 07706 044348<br>
+        Call: 07598 734167
+    </div>
 </header>
 
 <section class="hero">
-<h2>Expert Roofing Services</h2>
-<p>South East & London</p>
-<p>35+ Years Experience • Fully Insured • Reliable Service</p>
+    <h1>Expert Roofing Services</h1>
+    <p>South East & London</p>
+    <p>35+ Years Experience • Fully Insured • Reliable Service</p>
 
-<a class="btn" href="tel:07706044348">Call Now</a>
-<a class="btn" href="tel:07598734167">Call Now</a>
+    <a href="tel:07706044348" class="btn">Call Now</a>
+    <a href="tel:07598734167" class="btn">Call Now</a>
 </section>
 
 <section class="services">
-<div class="card">Roof Repairs</div>
-<div class="card">Flat Roofing</div>
-<div class="card">Guttering & Fascia</div>
-<div class="card">Lead Work</div>
+    <div class="service-box">Roof Repairs</div>
+    <div class="service-box">New Roofs</div>
+    <div class="service-box">Flat Roofing</div>
+    <div class="service-box">Fascia & Guttering</div>
+    <div class="service-box">Lead Work</div>
 </section>
 
-<section class="about">
-<div class="about-box">
-<h2>About Us</h2>
-<ul>
-<li>✔ 35 Years Experience</li>
-<li>✔ Site Work & Residential</li>
-<li>✔ All Types of Roofing: Pitched & Flat</li>
-<li>✔ Fascia & Guttering</li>
-</ul>
+<section class="section">
+    <div class="box">
+        <h2>About Us</h2>
+        <p>✔ 35 Years Experience</p>
+        <p>✔ Site Work & Residential</p>
+        <p>✔ All Types of Roofing: Pitched & Flat</p>
+        <p>✔ Fascia & Guttering</p>
 
-<a class="btn" href="tel:07706044348">Call Now</a>
-<a class="btn" href="tel:07598734167">Call Now</a>
-</div>
+        <a href="tel:07706044348" class="btn">Call Now</a>
+        <a href="tel:07598734167" class="btn">Call Now</a>
+    </div>
 
-<div class="form-box">
-<h2>Get Your Free Quote</h2>
-<input type="text" placeholder="Name">
-<input type="text" placeholder="Phone Number">
-<textarea placeholder="Message"></textarea>
-<a class="btn">Send Message</a>
-</div>
+    <div class="box">
+        <h2>Get Your Free Quote</h2>
+        <input placeholder="Name">
+        <input placeholder="Phone Number">
+        <textarea placeholder="Message"></textarea>
+        <button class="btn">Send Message</button>
+    </div>
 </section>
 
-<section class="cta">
-<h2>Get Your Free Quote Today</h2>
-<a class="btn" href="tel:07706044348">Call 07706 044348</a>
-<a class="btn" href="tel:07598734167">Call 07598 734167</a>
-</section>
-
-<a class="whatsapp" href="https://wa.me/447706044348">💬</a>
-
-<div class="footer">
-© 2026 Crystal Roofing
-</div>
+<footer>
+    <h2>Get Your Free Quote Today</h2>
+    <a href="tel:07706044348" class="btn">Call 07706 044348</a>
+    <a href="tel:07598734167" class="btn">Call 07598 734167</a>
+    <p>© Crystal Roofing</p>
+</footer>
 
 </body>
 </html>
