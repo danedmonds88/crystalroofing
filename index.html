@@ -10,61 +10,44 @@
 body {
     margin:0;
     font-family: 'Segoe UI', sans-serif;
-    background:#f4f6f9;
+}
+
+/* TOP BAR */
+.topbar {
+    background:#0d1b2a;
+    color:white;
+    padding:8px 20px;
+    text-align:right;
+    font-size:14px;
 }
 
 /* HEADER */
 header {
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    padding:20px;
+    padding:15px 20px;
     background:white;
 }
 
 header img {
-    height:60px;
+    height:90px;
 }
 
-/* HERO SPLIT */
+/* HERO */
 .hero {
-    display:flex;
-    flex-wrap:wrap;
-}
-
-.hero-left {
-    flex:1;
-    padding:50px 30px;
-    background:#0d1b2a;
+    background:linear-gradient(120deg,#0d1b2a 60%, #1b3a57 60%);
     color:white;
+    padding:80px 20px;
 }
 
-.hero-left h1 {
-    font-size:38px;
-    margin-bottom:10px;
+.hero h1 {
+    font-size:40px;
 }
 
-.hero-left p {
-    margin:5px 0;
+.hero p {
+    margin:10px 0;
 }
 
-.hero-right {
-    flex:1;
-    background:url('https://images.unsplash.com/photo-1621905251918-48416bd8575a?q=80&w=1600') center/cover;
-    min-height:300px;
-}
-
-/* BADGE */
-.badge {
-    background:#ff6a00;
-    display:inline-block;
-    padding:10px 15px;
-    border-radius:20px;
-    margin-bottom:10px;
-    font-weight:bold;
-}
-
-/* BUTTONS */
 .btn {
     background:#ff6a00;
     color:white;
@@ -72,28 +55,43 @@ header img {
     text-decoration:none;
     border-radius:6px;
     display:inline-block;
-    margin-top:10px;
+    margin:5px;
+    font-weight:bold;
 }
 
 /* SERVICES STRIP */
 .services {
     display:flex;
-    overflow-x:auto;
+    flex-wrap:wrap;
+    justify-content:center;
     gap:15px;
-    padding:20px;
-    background:white;
+    padding:30px;
+    background:#f4f4f4;
 }
 
 .service {
-    min-width:180px;
-    background:#0d1b2a;
-    color:white;
+    background:white;
     padding:20px;
-    border-radius:10px;
+    border-radius:8px;
+    width:180px;
+    text-align:center;
+    font-weight:600;
 }
 
 /* ABOUT */
 .about {
+    padding:40px 20px;
+}
+
+.about h2 {
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+footer {
+    background:#0d1b2a;
+    color:white;
+    text-align:center;
     padding:30px;
 }
 
@@ -113,28 +111,21 @@ header img {
 
 <body>
 
+<div class="topbar">
+    📞 07706 044348 | 📞 07598 734167
+</div>
+
 <header>
     <img src="logo.png">
-    <div>
-        07706 044348<br>
-        07598 734167
-    </div>
 </header>
 
 <section class="hero">
-    <div class="hero-left">
-        <div class="badge">35+ Years Experience</div>
+    <h1>Roofing You Can Rely On</h1>
+    <p><strong>South East & London</strong></p>
+    <p>35+ Years Experience • Fully Insured • Trusted Experts</p>
 
-        <h1>Roofing You Can Rely On</h1>
-
-        <p>South East & London</p>
-        <p>Fully Insured • Trusted • Reliable</p>
-
-        <a href="tel:07706044348" class="btn">Call Now</a>
-        <a href="tel:07598734167" class="btn">Call Now</a>
-    </div>
-
-    <div class="hero-right"></div>
+    <a href="tel:07706044348" class="btn">Call Now</a>
+    <a href="tel:07598734167" class="btn">Call Now</a>
 </section>
 
 <section class="services">
@@ -147,17 +138,23 @@ header img {
 
 <section class="about">
     <h2>About Crystal Roofing</h2>
-
     <p>✔ 35 Years Experience</p>
     <p>✔ Site Work & Residential</p>
     <p>✔ All Types of Roofing</p>
-    <p>✔ Fascia & Guttering</p>
+    <p>✔ Fascia & Guttering Specialists</p>
 
     <br>
 
     <a href="tel:07706044348" class="btn">Call Now</a>
     <a href="tel:07598734167" class="btn">Call Now</a>
 </section>
+
+<footer>
+    <h2>Get Your Free Quote Today</h2>
+    <a href="tel:07706044348" class="btn">Call 07706 044348</a>
+    <a href="tel:07598734167" class="btn">Call 07598 734167</a>
+    <p>© Crystal Roofing</p>
+</footer>
 
 <a class="whatsapp" href="https://wa.me/447598734167">💬</a>
 
