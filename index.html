@@ -6,10 +6,18 @@
 <title>Crystal Roofing</title>
 
 <style>
-body {margin:0;font-family:Arial,sans-serif;background:#f5f7fa;}
-header {background:#0d1b2a;color:#fff;padding:15px 20px;display:flex;justify-content:space-between;align-items:center;}
-header h1 {margin:0;font-size:20px;}
-nav a {color:#fff;margin:0 10px;text-decoration:none;font-size:14px;}
+body {margin:0;font-family:Arial;background:#f4f6f9;}
+
+header {
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:15px 20px;
+background:#fff;
+box-shadow:0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {margin:0;color:#0d1b2a;}
 
 .hero {
 background:url('https://images.unsplash.com/photo-1597009534688-12d7aefc1b4b') center/cover;
@@ -19,61 +27,77 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 padding:40px;
-background-blend-mode:overlay;
 background-color:rgba(0,0,0,0.6);
+background-blend-mode:overlay;
 }
 
-.hero h2 {font-size:42px;margin-bottom:10px;}
-.hero p {max-width:500px;}
+.hero h2 {font-size:40px;margin:0;}
+.hero p {font-size:20px;margin:10px 0;}
+
 .btn {
 display:inline-block;
-margin:10px 10px 0 0;
 padding:12px 20px;
-background:#1b9aaa;
-color:white;
+margin:10px 10px 0 0;
+background:#ff6b00;
+color:#fff;
 text-decoration:none;
 border-radius:5px;
+font-weight:bold;
 }
-.btn.secondary {background:#e63946;}
-
-.section {padding:50px 20px;text-align:center;}
 
 .services {
 display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-max-width:1000px;
-margin:auto;
+grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+gap:15px;
+padding:40px;
 }
 
 .card {
 background:white;
 padding:20px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,0.1);
-transition:0.3s;
+text-align:center;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
 }
-.card:hover {transform:translateY(-5px);}
 
 .about {
-max-width:900px;
-margin:auto;
-text-align:left;
+display:flex;
+flex-wrap:wrap;
+gap:20px;
+padding:40px;
 }
+
+.about-box, .form-box {
+flex:1;
+background:white;
+padding:20px;
+border-radius:8px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+ul {list-style:none;padding:0;}
+ul li {margin:10px 0;}
 
 .cta {
 background:#0d1b2a;
 color:white;
-padding:50px 20px;
+padding:40px;
 text-align:center;
 }
 
+input, textarea {
+width:100%;
+padding:10px;
+margin:10px 0;
+border:1px solid #ccc;
+border-radius:5px;
+}
+
 .footer {
-background:#000;
-color:#ccc;
 text-align:center;
 padding:20px;
-font-size:14px;
+background:#000;
+color:#ccc;
 }
 
 .whatsapp {
@@ -94,54 +118,61 @@ text-decoration:none;
 
 <header>
 <h1>Crystal Roofing</h1>
-<nav>
-<a href="#">Home</a>
-<a href="#">Services</a>
-<a href="#">About</a>
-<a href="#">Contact</a>
-</nav>
+<div>
+<strong>Call:</strong> 07706 044348<br>
+<strong>Call:</strong> 07598 734167
+</div>
 </header>
 
 <section class="hero">
-<h2>Roofing You Can Rely On</h2>
-<p>Professional roofing services backed by 35+ years experience. Reliable, affordable and built to last.</p>
-<a class="btn" href="tel:07706044348">Call 07706 044348</a>
-<a class="btn secondary" href="tel:07598734167">Call 07598 734167</a>
+<h2>Expert Roofing Services</h2>
+<p>South East & London</p>
+<p>35+ Years Experience • Fully Insured • Reliable Service</p>
+
+<a class="btn" href="tel:07706044348">Call Now</a>
+<a class="btn" href="tel:07598734167">Call Now</a>
 </section>
 
-<section class="section">
-<h2>What We Offer</h2>
-<div class="services">
+<section class="services">
 <div class="card">Roof Repairs</div>
-<div class="card">New Roof Installations</div>
 <div class="card">Flat Roofing</div>
-<div class="card">Fascias & Guttering</div>
+<div class="card">Guttering & Fascia</div>
 <div class="card">Lead Work</div>
-</div>
 </section>
 
-<section class="section about">
-<h2>Trusted Local Roofers</h2>
-<p>With over 35 years experience, Crystal Roofing provides high-quality roofing services for both residential and site work.</p>
+<section class="about">
+<div class="about-box">
+<h2>About Us</h2>
 <ul>
-<li>✔ All types of roofing – pitched & flat</li>
-<li>✔ Lead work specialists</li>
-<li>✔ Fascia & guttering</li>
-<li>✔ Fully insured</li>
+<li>✔ 35 Years Experience</li>
+<li>✔ Site Work & Residential</li>
+<li>✔ All Types of Roofing: Pitched & Flat</li>
+<li>✔ Fascia & Guttering</li>
 </ul>
+
+<a class="btn" href="tel:07706044348">Call Now</a>
+<a class="btn" href="tel:07598734167">Call Now</a>
+</div>
+
+<div class="form-box">
+<h2>Get Your Free Quote</h2>
+<input type="text" placeholder="Name">
+<input type="text" placeholder="Phone Number">
+<textarea placeholder="Message"></textarea>
+<a class="btn">Send Message</a>
+</div>
 </section>
 
 <section class="cta">
 <h2>Get Your Free Quote Today</h2>
-<p>Call us now or message on WhatsApp</p>
-<a class="btn" href="tel:07706044348">Call Now</a>
-<a class="btn secondary" href="tel:07598734167">Call Now</a>
+<a class="btn" href="tel:07706044348">Call 07706 044348</a>
+<a class="btn" href="tel:07598734167">Call 07598 734167</a>
 </section>
 
 <a class="whatsapp" href="https://wa.me/447706044348">💬</a>
 
 <div class="footer">
-© 2026 Crystal Roofing. All rights reserved.
+© 2026 Crystal Roofing
 </div>
 
 </body>
