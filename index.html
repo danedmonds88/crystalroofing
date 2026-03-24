@@ -9,7 +9,8 @@
 <style>
 body {
     margin:0;
-    font-family:Arial, sans-serif;
+    font-family: 'Segoe UI', sans-serif;
+    background:#f5f7fa;
 }
 
 /* HEADER */
@@ -17,76 +18,107 @@ header {
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 20px;
+    padding:15px 30px;
     background:#ffffff;
+    box-shadow:0 2px 10px rgba(0,0,0,0.05);
 }
 
 header img {
     height:60px;
 }
 
-header div {
+.contact {
     text-align:right;
-    font-weight:bold;
+    font-weight:600;
 }
 
 /* HERO */
 .hero {
-    background:url('https://images.unsplash.com/photo-1590496793929-36417d3117de?q=80&w=1600') center/cover;
+    position:relative;
+    background:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1600') center/cover;
+    height:400px;
+    display:flex;
+    align-items:center;
+    padding:40px;
     color:white;
-    padding:80px 20px;
+}
+
+.hero::before {
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background:rgba(0,0,0,0.55);
+}
+
+.hero-content {
+    position:relative;
+    max-width:500px;
 }
 
 .hero h1 {
-    font-size:32px;
+    font-size:36px;
+    margin-bottom:10px;
+}
+
+.hero p {
+    margin:5px 0;
 }
 
 .btn {
+    display:inline-block;
     background:#ff6a00;
     color:white;
     padding:12px 20px;
+    margin-top:10px;
+    margin-right:10px;
+    border-radius:6px;
     text-decoration:none;
-    display:inline-block;
-    margin:5px;
-    border-radius:5px;
+    font-weight:600;
 }
 
 /* SERVICES */
 .services {
     display:flex;
-    flex-wrap:wrap;
     justify-content:center;
-    padding:30px;
     gap:15px;
+    padding:30px;
+    flex-wrap:wrap;
 }
 
-.service-box {
-    background:#f4f4f4;
+.card {
+    background:white;
     padding:20px;
-    border-radius:10px;
-    width:200px;
+    border-radius:12px;
+    width:180px;
     text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 /* ABOUT + FORM */
 .section {
     display:flex;
     flex-wrap:wrap;
-    padding:30px;
     gap:20px;
+    padding:30px;
 }
 
 .box {
     flex:1;
-    background:#f9f9f9;
-    padding:20px;
-    border-radius:10px;
+    background:white;
+    padding:25px;
+    border-radius:12px;
+    box-shadow:0 5px 15px rgba(0,0,0,0.05);
 }
 
 input, textarea {
     width:100%;
     padding:10px;
-    margin:5px 0;
+    margin:8px 0;
+    border-radius:5px;
+    border:1px solid #ddd;
 }
 
 /* FOOTER */
@@ -96,6 +128,18 @@ footer {
     text-align:center;
     padding:30px;
 }
+
+/* WHATSAPP BUTTON */
+.whatsapp {
+    position:fixed;
+    bottom:20px;
+    right:20px;
+    background:#25D366;
+    color:white;
+    padding:15px;
+    border-radius:50%;
+    font-size:20px;
+}
 </style>
 </head>
 
@@ -103,27 +147,29 @@ footer {
 
 <header>
     <img src="logo.png">
-    <div>
-        Call: 07706 044348<br>
-        Call: 07598 734167
+    <div class="contact">
+        📞 07706 044348<br>
+        📞 07598 734167
     </div>
 </header>
 
 <section class="hero">
-    <h1>Expert Roofing Services</h1>
-    <p>South East & London</p>
-    <p>35+ Years Experience • Fully Insured • Reliable Service</p>
+    <div class="hero-content">
+        <h1>Expert Roofing Services</h1>
+        <p><strong>South East & London</strong></p>
+        <p>35+ Years Experience • Fully Insured • Reliable</p>
 
-    <a href="tel:07706044348" class="btn">Call Now</a>
-    <a href="tel:07598734167" class="btn">Call Now</a>
+        <a href="tel:07706044348" class="btn">Call Now</a>
+        <a href="tel:07598734167" class="btn">Call Now</a>
+    </div>
 </section>
 
 <section class="services">
-    <div class="service-box">Roof Repairs</div>
-    <div class="service-box">New Roofs</div>
-    <div class="service-box">Flat Roofing</div>
-    <div class="service-box">Fascia & Guttering</div>
-    <div class="service-box">Lead Work</div>
+    <div class="card">🏠 Roof Repairs</div>
+    <div class="card">🏗 New Roofs</div>
+    <div class="card">🧱 Flat Roofing</div>
+    <div class="card">🧰 Fascia & Guttering</div>
+    <div class="card">🔩 Lead Work</div>
 </section>
 
 <section class="section">
@@ -131,8 +177,8 @@ footer {
         <h2>About Us</h2>
         <p>✔ 35 Years Experience</p>
         <p>✔ Site Work & Residential</p>
-        <p>✔ All Types of Roofing: Pitched & Flat</p>
-        <p>✔ Fascia & Guttering</p>
+        <p>✔ Pitched & Flat Roofing</p>
+        <p>✔ Fascia & Guttering Specialists</p>
 
         <a href="tel:07706044348" class="btn">Call Now</a>
         <a href="tel:07598734167" class="btn">Call Now</a>
@@ -153,6 +199,8 @@ footer {
     <a href="tel:07598734167" class="btn">Call 07598 734167</a>
     <p>© Crystal Roofing</p>
 </footer>
+
+<a class="whatsapp" href="https://wa.me/447598734167">💬</a>
 
 </body>
 </html>
