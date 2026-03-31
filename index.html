@@ -192,12 +192,25 @@ footer {
     <p>Recent roofing projects across South East & London</p>
 
     <div class="gallery">
-    <img src="Image1.jpg" onclick="openLightbox(this.src)">
-    <img src="Image2.jpg" onclick="openLightbox(this.src)">
-    <img src="Image3.jpg" onclick="openLightbox(this.src)">
-    <img src="Image4.jpg" onclick="openLightbox(this.src)">
-    <img src="Image5.JPG" onclick="openLightbox(this.src)">
-    <img src="Image6.jpg" onclick="openLightbox(this.src)">
+    .gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding: 15px 0;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1 / 1; /* THIS FIXES EVERYTHING */
+    object-fit: cover;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
 </div>
 </div>
     </div>
