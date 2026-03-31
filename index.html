@@ -5,7 +5,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crystal Roofing</title>
+<div id="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img">
+</div>
 
+<script>
+function openLightbox(src) {
+    document.getElementById("lightbox").style.display = "flex";
+    document.getElementById("lightbox-img").src = src;
+}
+
+function closeLightbox() {
+    document.getElementById("lightbox").style.display = "none";
+}
+</script>
 <style>
 body {
     margin:0;
