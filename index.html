@@ -15,45 +15,43 @@ body {
 
 /* HEADER */
 .header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background: white;
+    padding: 10px 15px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    z-index: 1000;
 }
 
-.logo {
-    height: 70px;
-}
+.logo { height: 60px; }
 
 .call-btn {
     background: #ff6a00;
     color: white;
-    padding: 10px 12px;
-    margin-left: 8px;
+    padding: 8px 10px;
+    margin-left: 5px;
     border-radius: 6px;
     text-decoration: none;
+    font-size: 12px;
     font-weight: bold;
 }
 
 /* HERO */
 .hero {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    margin-top: 80px;
+    background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
     url("Image1.jpg");
     background-size: cover;
     background-position: center;
     color: white;
-    padding: 60px 20px;
+    padding: 70px 20px;
 }
 
-.hero h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.hero p {
-    margin-bottom: 20px;
-}
+.hero h1 { font-size: 28px; }
 
 .btn {
     background: #ff6a00;
@@ -62,17 +60,22 @@ body {
     border-radius: 6px;
     text-decoration: none;
     display: inline-block;
-    margin-right: 10px;
+    margin-top: 10px;
 }
 
-/* SECTIONS */
-.section {
-    padding: 20px;
+/* TRUST BAR */
+.trust {
+    display: flex;
+    justify-content: space-around;
+    background: #fff;
+    padding: 15px 10px;
+    text-align: center;
+    font-size: 14px;
 }
 
-h2 {
-    margin-bottom: 10px;
-}
+/* SECTION */
+.section { padding: 20px; }
+h2 { margin-bottom: 10px; }
 
 /* SERVICES */
 .services p {
@@ -86,7 +89,6 @@ h2 {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
 }
-
 .gallery img {
     width: 100%;
     aspect-ratio: 1/1;
@@ -95,19 +97,50 @@ h2 {
     cursor: pointer;
 }
 
+/* REVIEWS */
+.reviews {
+    background: white;
+    padding: 20px;
+}
+.review {
+    margin-bottom: 15px;
+    padding: 15px;
+    border-left: 4px solid #ff6a00;
+    background: #fafafa;
+}
+
+/* FORM */
+.form input, .form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+}
+
+.form button {
+    width: 100%;
+    padding: 12px;
+    background: #ff6a00;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+}
+
 /* LIGHTBOX */
 #lightbox {
     display: none;
     position: fixed;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
     background: rgba(0,0,0,0.9);
+    top: 0;
+    left: 0;
     justify-content: center;
     align-items: center;
+    z-index: 9999;
 }
-
 #lightbox img {
     max-width: 90%;
     max-height: 90%;
@@ -120,10 +153,15 @@ h2 {
     right: 20px;
     background: #25D366;
     color: white;
-    padding: 15px;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 28px;
+    z-index: 9999;
 }
 </style>
 </head>
@@ -133,10 +171,9 @@ h2 {
 <!-- HEADER -->
 <div class="header">
     <img src="logo.png" class="logo">
-
     <div>
-        <a href="tel:+447706044348" class="call-btn">Call 07706 044348</a>
-        <a href="tel:+447598734167" class="call-btn">Call 07598 734167</a>
+        <a href="tel:+447706044348" class="call-btn">07706 044348</a>
+        <a href="tel:+447598734167" class="call-btn">07598 734167</a>
     </div>
 </div>
 
@@ -145,9 +182,14 @@ h2 {
     <h1>Expert Roofing Services</h1>
     <p>South East & London<br>
     35+ Years Experience • Fully Insured • Reliable Service</p>
-
     <a href="tel:+447706044348" class="btn">Call Now</a>
-    <a href="tel:+447598734167" class="btn">Call Now</a>
+</div>
+
+<!-- TRUST -->
+<div class="trust">
+    <div>✔ 35+ Years Experience</div>
+    <div>✔ Fully Insured</div>
+    <div>✔ Fast Response</div>
 </div>
 
 <!-- SERVICES -->
@@ -165,8 +207,6 @@ h2 {
 <!-- GALLERY -->
 <div class="section">
     <h2>Our Work</h2>
-    <p>Recent roofing projects across South East & London</p>
-
     <div class="gallery">
         <img src="Image1.jpg" onclick="openLightbox(this.src)">
         <img src="Image2.jpg" onclick="openLightbox(this.src)">
@@ -177,15 +217,39 @@ h2 {
     </div>
 </div>
 
+<!-- REVIEWS -->
+<div class="reviews">
+    <h2>Customer Reviews</h2>
+
+    <div class="review">⭐️⭐️⭐️⭐️⭐️  
+    "Brilliant job, very professional and reliable."  
+    </div>
+
+    <div class="review">⭐️⭐️⭐️⭐️⭐️  
+    "Great workmanship and fair price. Highly recommend."  
+    </div>
+
+    <div class="review">⭐️⭐️⭐️⭐️⭐️  
+    "Turned up on time and did a fantastic job."  
+    </div>
+</div>
+
+<!-- FORM -->
+<div class="section">
+    <h2>Get a Free Quote</h2>
+
+    <div class="form">
+        <input type="text" placeholder="Your Name">
+        <input type="tel" placeholder="Phone Number">
+        <textarea placeholder="Describe your job"></textarea>
+        <button>Request Quote</button>
+    </div>
+</div>
+
 <!-- ABOUT -->
 <div class="section">
     <h2>About Crystal Roofing</h2>
-    <p>We have over 35 years experience providing reliable roofing services across South East & London.</p>
-
-    <p>✔ Site Work & Residential</p>
-    <p>✔ All Types of Roofing: Pitched & Flat</p>
-    <p>✔ Fully Insured</p>
-    <p>✔ Friendly & Professional Service</p>
+    <p>Crystal Roofing is a trusted, family-run company with over 35 years experience delivering high-quality roofing across South East & London.</p>
 </div>
 
 <!-- LIGHTBOX -->
@@ -194,30 +258,13 @@ h2 {
 </div>
 
 <!-- WHATSAPP -->
-.whatsapp {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #25D366;
-    color: white;
-    width: 65px;
-    height: 65px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    text-decoration: none;
-    font-size: 28px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-    z-index: 999;
-}
+<a href="https://wa.me/447598734167" class="whatsapp">💬</a>
 
 <script>
 function openLightbox(src) {
     document.getElementById("lightbox").style.display = "flex";
     document.getElementById("lightbox-img").src = src;
 }
-
 function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
