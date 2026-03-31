@@ -5,9 +5,212 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Crystal Roofing</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+}
+
+.logo {
+    height: 70px;
+}
+
+.call-btn {
+    background: #ff6a00;
+    color: white;
+    padding: 10px 12px;
+    margin-left: 8px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+    url("Image1.jpg");
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    margin-bottom: 20px;
+}
+
+.btn {
+    background: #ff6a00;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* SECTIONS */
+.section {
+    padding: 20px;
+}
+
+h2 {
+    margin-bottom: 10px;
+}
+
+/* SERVICES */
+.services p {
+    padding: 10px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+/* GALLERY */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* LIGHTBOX */
+#lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+#lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+/* WHATSAPP */
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<div class="header">
+    <img src="logo.png" class="logo">
+
+    <div>
+        <a href="tel:+447706044348" class="call-btn">Call 07706 044348</a>
+        <a href="tel:+447598734167" class="call-btn">Call 07598 734167</a>
+    </div>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Expert Roofing Services</h1>
+    <p>South East & London<br>
+    35+ Years Experience • Fully Insured • Reliable Service</p>
+
+    <a href="tel:+447706044348" class="btn">Call Now</a>
+    <a href="tel:+447598734167" class="btn">Call Now</a>
+</div>
+
+<!-- SERVICES -->
+<div class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <p>✔ Roof Repairs</p>
+        <p>✔ New Roof Installations</p>
+        <p>✔ Flat Roofing</p>
+        <p>✔ Fascia & Guttering</p>
+        <p>✔ Lead Work</p>
+    </div>
+</div>
+
+<!-- GALLERY -->
+<div class="section">
+    <h2>Our Work</h2>
+    <p>Recent roofing projects across South East & London</p>
+
+    <div class="gallery">
+        <img src="Image1.jpg" onclick="openLightbox(this.src)">
+        <img src="Image2.jpg" onclick="openLightbox(this.src)">
+        <img src="Image3.jpg" onclick="openLightbox(this.src)">
+        <img src="Image4.jpg" onclick="openLightbox(this.src)">
+        <img src="Image5.JPG" onclick="openLightbox(this.src)">
+        <img src="Image6.jpg" onclick="openLightbox(this.src)">
+    </div>
+</div>
+
+<!-- ABOUT -->
+<div class="section">
+    <h2>About Crystal Roofing</h2>
+    <p>We have over 35 years experience providing reliable roofing services across South East & London.</p>
+
+    <p>✔ Site Work & Residential</p>
+    <p>✔ All Types of Roofing: Pitched & Flat</p>
+    <p>✔ Fully Insured</p>
+    <p>✔ Friendly & Professional Service</p>
+</div>
+
+<!-- LIGHTBOX -->
 <div id="lightbox" onclick="closeLightbox()">
     <img id="lightbox-img">
 </div>
+
+<!-- WHATSAPP -->
+.whatsapp {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 28px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 999;
+}
 
 <script>
 function openLightbox(src) {
@@ -19,230 +222,6 @@ function closeLightbox() {
     document.getElementById("lightbox").style.display = "none";
 }
 </script>
-<style>
-body {
-    margin:0;
-    font-family:Arial, sans-serif;
-    background:#f5f5f5;
-    .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    padding: 10px 0;
-}
-
-.gallery img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-}
-
-/* HEADER */
-header {
-    background:white;
-    padding:15px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-header img {
-    height:110px;
-}
-
-.header-right {
-    text-align:right;
-    font-weight:bold;
-}
-
-/* HERO */
-.hero {
-    padding:30px 20px;
-    background:#eaeaea;
-}
-
-.hero h1 {
-    font-size:28px;
-    margin-bottom:5px;
-}
-
-.hero p {
-    margin:5px 0;
-}
-
-/* BUTTONS */
-.btn {
-    display:inline-block;
-    background:#ff6a00;
-    color:white;
-    padding:12px 18px;
-    margin-top:10px;
-    margin-right:10px;
-    border-radius:5px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-/* SERVICES */
-.services {
-    padding:20px;
-    background:white;
-}
-
-.services h2 {
-    margin-bottom:10px;
-}
-
-.service {
-    padding:10px 0;
-    border-bottom:1px solid #ddd;
-}
-
-/* ABOUT */
-.about {
-    padding:20px;
-}
-
-.about h2 {
-    margin-bottom:10px;
-}
-
-/* FORM */
-.form {
-    padding:20px;
-    background:white;
-}
-
-input, textarea {
-    width:100%;
-    padding:10px;
-    margin:6px 0;
-    border:1px solid #ccc;
-}
-
-button {
-    background:#ff6a00;
-    color:white;
-    padding:12px;
-    border:none;
-    width:100%;
-    font-weight:bold;
-}
-
-/* FOOTER */
-footer {
-    background:#0d1b2a;
-    color:white;
-    text-align:center;
-    padding:20px;
-}
-
-/* WHATSAPP */
-.whatsapp {
-    position:fixed;
-    bottom:20px;
-    right:20px;
-    background:#25D366;
-    color:white;
-    padding:15px;
-    border-radius:50%;
-    font-size:20px;
-}
-</style>
-</head>
-
-<body>
-
-<header>
-    <img src="logo.png">
-    <div class="header-right">
-        <a href="tel:+447706044348" class="btn">Call 07706 044348</a>
-<a href="tel:+447598734167" class="btn">Call 07598 734167</a>
-    </div>
-</header>
-
-<section class="hero">
-    <h1>Expert Roofing Services</h1>
-    <p><strong>South East & London</strong></p>
-    <p>35+ Years Experience • Fully Insured • Reliable Service</p>
-
-    <a href="tel:07706044348" class="btn">Call Now</a>
-    <a href="tel:07598734167" class="btn">Call Now</a>
-</section>
-
-<section class="services">
-    <h2>Our Services</h2>
-
-    <div class="service">✔ Roof Repairs</div>
-    <div class="service">✔ New Roof Installations</div>
-    <div class="service">✔ Flat Roofing</div>
-    <div class="service">✔ Fascia & Guttering</div>
-    <div class="service">✔ Lead Work</div>
-</section>
-<section class="gallery">
-    <h2>Our Work</h2>
-    <p>Recent roofing projects across South East & London</p>
-
-    <div class="gallery">
-    .gallery {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 12px;
-    padding: 15px 0;
-}
-
-.gallery img {
-    width: 100%;
-    aspect-ratio: 1 / 1; /* THIS FIXES EVERYTHING */
-    object-fit: cover;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.gallery img:hover {
-    transform: scale(1.05);
-}
-</div>
-</div>
-    </div>
-</section>
-<section class="about">
-    <h2>About Crystal Roofing</h2>
-
-    <p>We have over 35 years experience providing reliable roofing services across South East & London.</p>
-
-    <p>✔ Site Work & Residential</p>
-    <p>✔ All Types of Roofing: Pitched & Flat</p>
-    <p>✔ Fully Insured</p>
-    <p>✔ Friendly & Professional Service</p>
-
-    <a href="tel:07706044348" class="btn">Call Now</a>
-</section>
-
-<section class="form">
-    <h2>Get Your Free Quote</h2>
-
-    <input placeholder="Name">
-    <input placeholder="Phone Number">
-    <textarea placeholder="Message"></textarea>
-
-    <button>Send Message</button>
-</section>
-
-<footer>
-    <p>© Crystal Roofing</p>
-</footer>
-
-<a class="whatsapp" href="https://wa.me/447598734167">💬</a>
 
 </body>
 </html>
